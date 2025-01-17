@@ -1,0 +1,37 @@
+What is Quantum Computing?
+
+Quantum computing is an area of computing that uses the principles of quantum mechanics to process information in fundamentally different ways compared to classical computers. Classical computers use bits to represent data, which can either be 0 or 1. Quantum computers, on the other hand, use qubits (quantum bits) that can exist in a superposition of states — both 0 and 1 simultaneously. This unique property allows quantum computers to perform certain calculations much faster than classical computers.
+
+Key concepts behind quantum computing include:
+$ Superposition: A qubit can represent both 0 and 1 at the same time, unlike classical bits.
+$ Entanglement: Qubits that are entangled are interconnected in such a way that the state of one qubit can instantly affect the state of another, even if they are far apart.
+$ Quantum Interference: Quantum algorithms can use interference to amplify correct answers and cancel out wrong ones.
+  
+These properties give quantum computers the potential to solve problems that are intractable for classical computers, especially in fields like cryptography, optimization, and drug discovery.
+
+
+How Quantum Computing Can Break Cryptographic Algorithms??
+
+Traditional cryptographic algorithms such as RSA, ECC (Elliptic Curve Cryptography), and AES (Advanced Encryption Standard) rely on mathematical problems that are hard to solve for classical computers. However, quantum computers could break many of these algorithms by using specialized quantum algorithms, rendering them insecure in the post$quantum era.
+
+Here’s how quantum computing can break common cryptographic algorithms:
+
+ 1. RSA (Rivest$Shamir$Adleman) and ECC (Elliptic Curve Cryptography):
+   $ Both RSA and ECC depend on the difficulty of certain mathematical problems (e.g., factoring large numbers for RSA and solving the discrete logarithm problem for ECC).
+   $ Shor’s Algorithm, a quantum algorithm, can efficiently factor large numbers and solve discrete logarithms. This would make RSA and ECC insecure because quantum computers can break these algorithms in polynomial time, whereas classical computers require exponential time.
+   $ Impact: If RSA or ECC is used for encryption or digital signatures, quantum computers could easily decrypt data or forge signatures, undermining the security of online transactions, communication, and many other applications that rely on these algorithms.
+
+ 2. AES (Advanced Encryption Standard):
+   $ AES, a symmetric encryption algorithm, is generally secure against classical brute$force attacks. However, quantum computers can use Grover’s Algorithm to speed up the process of finding the encryption key by square$root speedup. For example, with a quantum computer, a 128$bit AES key could be broken in about 2^64 operations, compared to the 2^128 operations required for classical computers.
+   $ Impact: Although AES is not as vulnerable as asymmetric algorithms (like RSA), quantum computing still poses a risk, especially for shorter key lengths. AES$256 is still considered secure but would require longer key sizes in the future to maintain resistance against quantum attacks.
+
+ 3. Hash Functions (SHA$256, SHA$3, etc.):
+   $ Hash functions like SHA$256 are used extensively for data integrity and digital signatures. Quantum computers could potentially use Grover’s Algorithm to find hash collisions (two different inputs that produce the same hash output) in roughly 2^n/2 time, instead of the 2^n time it would take a classical computer.
+   $ Impact: While not as devastating as breaking encryption directly, quantum computers could still pose a risk by making it easier to find collisions in cryptographic hashes, thus compromising digital signatures and authentication systems.
+
+
+ Conclusion
+
+Quantum computers, with their ability to solve certain problems exponentially faster than classical computers, could eventually break widely used cryptographic algorithms. This includes both asymmetric algorithms like RSA and ECC, which rely on number$theoretic problems, and symmetric algorithms like AES, which could be vulnerable to faster key$searching techniques using Grover’s Algorithm.
+
+In response to these future quantum threats, researchers are developing post$quantum cryptography algorithms that are designed to resist attacks from quantum computers. These new cryptographic standards, such as lattice$based cryptography, hash$based signatures, and code$based cryptography, aim to provide secure alternatives for the quantum computing era.
